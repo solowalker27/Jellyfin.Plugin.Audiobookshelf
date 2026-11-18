@@ -69,10 +69,12 @@ Both services must be reachable from the machine running Jellyfin — either on 
 
 ### Via Jellyfin Plugin Repository (recommended)
 
+The fork uses the existing Audiobookshelf plugin ID so it can upgrade an upstream installation and keep its settings. If you already added the upstream repository, replace its URL with the fork URL below, or disable the upstream repository before adding the fork.
+
 1. In Jellyfin, go to **Dashboard → Plugins → Repositories**
 2. Click **➕** and paste this URL:
    ```
-   https://raw.githubusercontent.com/SirFfej/Jellyfin.Plugin.Audiobookshelf/main/manifest.json
+   https://raw.githubusercontent.com/solowalker27/Jellyfin.Plugin.Audiobookshelf/main/manifest.json
    ```
 3. Go to **Dashboard → Plugins → Catalog**, find **Audiobookshelf**, and click **Install**
 4. Restart Jellyfin when prompted

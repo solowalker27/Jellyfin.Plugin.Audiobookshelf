@@ -8,6 +8,8 @@ on:
 
 jobs:
   call:
+    # The upstream deployment uses private hosting credentials. The fork serves GitHub release assets.
+    if: github.repository == 'SirFfej/Jellyfin.Plugin.Audiobookshelf'
     uses: jellyfin/jellyfin-meta-plugins/.github/workflows/publish.yaml@master
     with:
       version: ${{ github.event.release.tag_name }}
