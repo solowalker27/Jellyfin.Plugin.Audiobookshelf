@@ -69,10 +69,12 @@ Both services must be reachable from the machine running Jellyfin — either on 
 
 ### Via Jellyfin Plugin Repository (recommended)
 
+The fork uses the existing Audiobookshelf plugin ID so it can upgrade an upstream installation and keep its settings. If you already added the upstream repository, replace its URL with the fork URL below, or disable the upstream repository before adding the fork.
+
 1. In Jellyfin, go to **Dashboard → Plugins → Repositories**
 2. Click **➕** and paste this URL:
    ```
-   https://raw.githubusercontent.com/SirFfej/Jellyfin.Plugin.Audiobookshelf/main/manifest.json
+   https://raw.githubusercontent.com/solowalker27/Jellyfin.Plugin.Audiobookshelf/main/manifest.json
    ```
 3. Go to **Dashboard → Plugins → Catalog**, find **Audiobookshelf**, and click **Install**
 4. Restart Jellyfin when prompted
@@ -131,7 +133,7 @@ The script auto-detects Jellyfin's media volumes, network, and UID/GID — no ma
 
 4. Click **Test Connection** to verify ABS is reachable and the token is valid
 
-5. **Included Library IDs** — leave blank to include all ABS book libraries, or enter comma-separated library IDs to restrict
+5. **Jellyfin Libraries** — select the Jellyfin book/music libraries to sync, or leave all unchecked to include all eligible libraries. These are Jellyfin library IDs, not Audiobookshelf library IDs. Metadata candidates are read from all ABS book libraries accessible to the configured token
 
 6. **Progress Sync** — enable/disable inbound and outbound sync independently; adjust the pull interval
 
